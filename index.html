@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>
+        Assignment 2
+    </title>
+
+    <style>
+        .row{
+            width:720px;
+            margine: 10px auto 10px auto ;
+        }
+        .image-container {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 20px;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+
+</head>
+
+<body style="background-color: #B6FFD6;">
+    <div class="row">
+        <div class="image-container"><img id="clubnotifs" src="img/clubnotifs.png" width="200" height="200" onmouseover="this.src='img/clubnotifs2.png';" onmouseout="this.src='img/clubnotifs.png';"/></div>
+        <div class="image-container"><img id="joinclub" src="img/joinclub.png" width="200" height="200" onmouseover="this.src='img/joinclub2.png';" onmouseout="this.src='img/joinclub.png';"/></div>
+        <div class="image-container"><img id="leaveclub" src="img/leaveclub.png" width="200" height="200" onmouseover="this.src='img/leaveclub2.png';" onmouseout="this.src='img/leaveclub.png';"/></div>
+    </div>
+    <div class="row">
+        <div class="image-container"><img id="searchclub" src="img/searchclub.png" width="200" height="200" onmouseover="this.src='img/searchclub2.png';" onmouseout="this.src='img/searchclub.png';"/></div>
+        <div class="image-container"><img id="joinedclubs" src="img/joinedclubs.png" width="200" height="200" onmouseover="this.src='img/joinedclubs2.png';" onmouseout="this.src='img/joinedclubs.png';"/></div>
+        <div class="image-container"><img id="events" src="img/events.png" width="200" height="200" onmouseover="this.src='img/events2.png';" onmouseout="this.src='img/events.png';"/></div>
+    </div>
+    <div class="row">
+        <div class="image-container"><img id="invitetoclub" src="img/invitetoclub.png" width="200" height="200" onmouseover="this.src='img/invitetoclub2.png';" onmouseout="this.src='img/invitetoclub.png';"/></div>
+        <div class="image-container"><img id="createclub" src="img/creatclub.png" width="200" height="200" onmouseover="this.src='img/creatclub2.png';" onmouseout="this.src='img/creatclub.png';"/></div>
+        <div class="image-container"><img id="eventcreate" src="img/eventcreate.png" width="200" height="200" onmouseover="this.src='img/eventcreate2.png';" onmouseout="this.src='img/eventcreate.png';"/></div>
+    </div>
+
+    <script>
+        var soundclubnotifs = new buzz.sound("sound/clubnotifs.wav");
+        var soundjoinclub = new buzz.sound("sound/joinclub.wav");
+        var soundleaveclub = new buzz.sound("sound/leaveclub.wav");
+        var soundsearchclub = new buzz.sound("sound/searchclub.wav");
+        var soundjoinedclubs = new buzz.sound("sound/joinedclubs.wav");
+        var soundevents = new buzz.sound("sound/events.wav");
+        var soundinvitetoclub = new buzz.sound("sound/invitetoclub.wav");
+        var soundcreateclub = new buzz.sound("sound/createclub.wav");
+        var soundeventcreate = new buzz.sound("sound/eventcreate.wav");
+
+        window.onload = function() {
+            document.getElementById('clubnotifs').addEventListener('click', function () {soundclubnotifs.play();});
+            document.getElementById('joinclub').addEventListener('click', function () {soundjoinclub.play();});
+            document.getElementById('leaveclub').addEventListener('click', function () {soundleaveclub.play();});
+            document.getElementById('searchclub').addEventListener('click', function () {soundsearchclub.play();});
+            document.getElementById('joinedclubs').addEventListener('click', function () {soundjoinedclubs.play();});
+            document.getElementById('events').addEventListener('click', function () {soundevents.play();});
+            document.getElementById('invitetoclub').addEventListener('click', function () {soundinvitetoclub.play();});
+            document.getElementById('createclub').addEventListener('click', function () {soundcreateclub.play();});
+            document.getElementById('eventcreate').addEventListener('click', function () {soundeventcreate.play();});
+        }
+
+
+    </script>
+</body>
+
+</html>
